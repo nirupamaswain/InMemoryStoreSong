@@ -15,9 +15,7 @@ public class RecentlyPlayedStore {
         recentSongs=new LinkedList<>();
     }
 
-    /**
-     * User adding songs to the recently played song list
-     */
+    
     public void addSong(String name, String user){
         if (!songs.containsKey(user)){
             songs.put(user, new ArrayList<Song>());
@@ -31,9 +29,7 @@ public class RecentlyPlayedStore {
         currentSize++;
     }
 
-    /**
-     * This function returns the songs by removing the least recently played songs
-     */
+    
     private void evictLeastRecentlyPlayed(){
         if(currentSize>=capacity){
             Song leastRecentlyPlayed =recentSongs.removeLast();
@@ -45,9 +41,7 @@ public class RecentlyPlayedStore {
         }
     }
 
-    /**
-     * This function returns recently played songs
-     */
+   
     public List<String> getRecentlyPlayedSongs(String user){
         if(songs.containsKey(user)){
             ArrayList<Song> userSongs = songs.get(user);

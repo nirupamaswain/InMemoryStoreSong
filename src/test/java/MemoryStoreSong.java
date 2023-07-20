@@ -6,7 +6,7 @@ public class MemoryStoreSong {
 
 	 @Test
 	    public void inMemoryStoreSongs(){
-	        //Initial Capacity is 3 songs per user
+	        
 	        RecentlyPlayedStore store=new RecentlyPlayedStore(3);
 
 	        store.addSong("Song 1","User A");
